@@ -1,0 +1,5 @@
+# 스펠 체커
+.vscode
+
+# Composer의 의존성 폴더
+vendor
