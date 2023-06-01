@@ -3,3 +3,6 @@
 
 # Composer의 의존성 폴더
 vendor
+
+# 환경 변수
+.env
