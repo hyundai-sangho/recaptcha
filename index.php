@@ -8,7 +8,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 // 구글 리캡챠 사이트 키값을 입력한다.
-const SITEKEY = $_ENV['SITEKEY'];
+$sitekey = $_ENV['SITEKEY'];
 
 ?>
 
@@ -31,7 +31,7 @@ const SITEKEY = $_ENV['SITEKEY'];
   <form id="server" action="server.php" method="post">
     <input type="hidden" name="recatchaResponse" value="">
     <div class="recaptcha">
-      <div class="g-recaptcha" data-sitekey="<?php echo SITEKEY ?>"></div>
+      <div class="g-recaptcha" data-sitekey="<?php echo $sitekey ?>"></div>
     </div>
     <div class="submit">
       <input type="submit" value="등록">

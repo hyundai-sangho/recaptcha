@@ -10,7 +10,7 @@ $dotenv->load();
 // 리캽챠 서버단 프로그램 예제
 
 // 구글 리캡챠 비밀키 값을 입력한다.
-const SECRET_KEY = $_ENV['SECRET_KEY'];
+$secret_key = $_ENV['SECRET_KEY'];
 
 extract($_POST);
 
@@ -28,7 +28,7 @@ if (empty($recatchaResponse)) {
 
 // API URL 데이터
 $apiData = array(
-  "secret" => SECRET_KEY,
+  "secret" => $secret_key,
   "response" => $recatchaResponse,
   "remoteip" => $_SERVER['REMOTE_ADDR'],
 );
